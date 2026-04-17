@@ -1,4 +1,4 @@
-# 🏥 Fabric-Healthcare-Analytics
+<h1 style="font-size: 18pt;">🏥 Fabric-Healthcare-Analytics</h1>
 > **End-to-end Data Engineering solution leveraging the Microsoft Fabric ecosystem to transform raw clinical data into actionable insights.**
 
 ---
