@@ -40,9 +40,26 @@ To ensure a robust system, the data flows through three distinct layers within *
 
 ## 📂 Project Structure
 
-```text
+
 ├── 01-ingestion-bronze/   # Fabric Notebooks for data landing
 ├── 02-refinement-silver/  # Cleaning & validation logic
 ├── 03-analytics-gold/     # Aggregation & Gold layer views
 ├── data/                  # Sample synthetic datasets
 └── docs/                  # Architecture diagrams and documentation
+
+---
+
+## 🛠️ Data Platform Architecture
+
+This project implements a clinical data platform using the standardized **Medallion Architecture**. This design ensures clear separation of concerns, data reliability, and high-performance analytics.
+
+Here is the visual representation of the platform’s data flow within Microsoft Fabric:
+
+![Healthcare Platform Architecture](docs/architecture_diagram.png)
+
+### Architecture Deep Dive
+
+1.  **Ingestion:** Raw patient records landed in the **Bronze Layer**.
+2.  **Refinement:** PySpark used to perform schema enforcement, handle null values, and apply **SHA-256 hashing** for robust PII masking in the **Silver Layer**.
+3.  **Aggregation:** Data curated into business-ready dimensions and facts in the **Gold Layer** for optimized querying.
+4.  **Visualization:** Data visualized in **Power BI** using **Direct Lake** mode for real-time reporting.
